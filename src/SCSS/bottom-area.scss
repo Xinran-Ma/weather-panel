@@ -1,0 +1,39 @@
+.bottom-area {
+  display: flex;
+
+  .news {
+    flex: 0 0 35%;
+    max-height: 300px;
+    overflow-y: scroll;
+
+    .single-news {
+      margin: 0 10px;
+      padding: 10px 0;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid lightgrey;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+          color: #bd7700;
+        }
+      }
+
+      .published-time {
+        color: grey;
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+    }
+  }
+
+  .forecast-weather {
+    flex: 0 0 65%;
+    display: flex;
+    justify-content: space-around;
+  }
+}

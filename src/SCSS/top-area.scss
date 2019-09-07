@@ -1,0 +1,108 @@
+.top-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-image: url("https://images.unsplash.com/photo-1551466270-aaf3e70ae730?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+
+  .current-weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 50%;
+
+    &__top-area{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      margin: 32px 0;
+
+      .temperature {
+        font-size: 5em;
+        color: white;
+      }
+
+      .weather-description {
+        font-size: 1.5em;
+        color: #bbbbbb;
+      }
+    }
+
+    &__bottom-area{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 80%;
+      margin: 32px 0;
+
+      .humidity {
+        flex: 1 1 50%;
+        text-align: center;
+        border-right: 1px solid #bbbbbb;
+
+        &-title {
+          margin: 16px 0;
+          color: #bbbbbb;
+        }
+
+        &-data {
+          margin: 16px 0;
+          color: #bbbbbb;
+        }
+      }
+
+      .wind {
+        flex: 1 1 50%;
+        text-align: center;
+
+        &-title {
+          margin: 16px 0;
+          color: #bbbbbb;
+        }
+
+        &-data {
+          margin: 16px 0;
+          color: #bbbbbb;
+        }
+      }
+    }
+  }
+
+  .location {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+    &__name {
+      font-size: 5em;
+      margin: 32px 0;
+      color: white;
+    }
+
+    &__list {
+      visibility: hidden;
+      list-style: none;
+      padding: 0;
+      // margin: 32px 0;
+
+      li {
+        color: #bbbbbb;
+        margin: 8px 0;
+      }
+    }
+
+    &:hover .location__list{
+      visibility: visible;
+
+      li:hover {
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+}
